@@ -1,0 +1,6 @@
+framework module NaverSpeech {
+  umbrella header "NaverSpeech.h"
+
+  export *
+  module * { export * }
+}

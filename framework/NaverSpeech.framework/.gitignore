@@ -1,0 +1,12 @@
+*~
+*.a
+*.o
+*.so
+*.swo
+*.swp
+**/.DS_Store
+.DS_Store
+*.DS_Store
+
+tags
+TAGS
