@@ -4,7 +4,6 @@
 
 자세한 내용은 [네이버개발자 음성인식 API 명세](https://developers.naver.com/docs/labs/vrecog) 를 참고하세요.
 
-
 사용법
 ==
 **1.** 제공된 sample app의 repository를 clone하거나 zip으로 내려받아 framework폴더 안의 `NaverSpeech.framework`를 target app의 `Embedded Binaries`에 추가 시켜줍니다. 음성인식 framework는 fat binary 형태로 제공되고 있습니다. 따라서 `Build Settings`의 `Enable Bitcode` 옵션을 사용할 수 없으니 `No`로 변경해 주어야 합니다. 
