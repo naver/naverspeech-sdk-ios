@@ -20,49 +20,46 @@
 
 /**
  음성인식 최종 결과 화자 gender 정보
-
- - NSKMale: 남성
- - NSKFemale: 여성
  */
 typedef NS_ENUM(NSInteger, NSKGender)
 {
+    /// - NSKMale: 남성
     NSKMale = 0,
+    /// - NSKFemale: 여성
     NSKFemale = 1
 };
 
 
 /**
  음성인식 가능한 언어
-
- - NSKRecognizerLanguageCodeNone: none
- - NSKRecognizerLanguageCodeKorean: 한국어
- - NSKRecognizerLanguageCodeJapanese: 일본어
- - NSKRecognizerLanguageCodeEnglish: 영어
- - NSKRecognizerLanguageCodeSimplifiedChinese: 중국어(간체)
  */
 typedef NS_ENUM(NSInteger, NSKRecognizerLanguageCode)
 {
+    /// - NSKRecognizerLanguageCodeNone: none
     NSKRecognizerLanguageCodeNone = -1,
+    ///  - NSKRecognizerLanguageCodeKorean: 한국어
     NSKRecognizerLanguageCodeKorean = 0,
+    /// - NSKRecognizerLanguageCodeJapanese: 일본어
     NSKRecognizerLanguageCodeJapanese = 1,
+    /// - NSKRecognizerLanguageCodeEnglish: 영어
     NSKRecognizerLanguageCodeEnglish = 2,
+    /// - NSKRecognizerLanguageCodeSimplifiedChinese: 중국어(간체)
     NSKRecognizerLanguageCodeSimplifiedChinese = 3
 };
 
 
 /**
  EPD(End Point Detection) type
-
- - NSKEPDTypeNone: none
- - NSKEPDTypeAuto: Auto, 화자가 일정 시간동안 발화 하지않으면 자동으로 끝으로 인식
- - NSKEPDTypeManual: Manual, `- stop:`을 호출 해야만 끝으로 인식
- - NSKEPDTypeHybrid: Auto, Manual 두가지 모두를 사용할 경우
  */
 typedef NS_ENUM(NSInteger, NSKEPDType)
 {
+    /// - NSKEPDTypeNone: none
     NSKEPDTypeNone = -1,
+    /// - NSKEPDTypeAuto: Auto, 화자가 일정 시간동안 발화 하지않으면 자동으로 끝으로 인식
     NSKEPDTypeAuto = 0,
+    /// - NSKEPDTypeManual: Manual, `- stop:`을 호출 해야만 끝으로 인식
     NSKEPDTypeManual = 1,
+    /// - NSKEPDTypeHybrid: Auto, Manual 두가지 모두를 사용할 경우
     NSKEPDTypeHybrid = 2
 };
 

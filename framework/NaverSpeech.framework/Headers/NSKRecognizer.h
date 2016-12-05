@@ -29,7 +29,7 @@
  따라서 network 연결과 앱에서 마이크에 대한 접근 허용이 필요합니다.
  음성인식 수행 과정은 아래의 state diagram과 같습니다.
 
- ![State diagram](./NaverSpeech/state_diagram.png "diagram")
+ ![State diagram](https://github.com/naver/naverspeech-sdk-ios/blob/master/framework/NaverSpeech.framework/state_diagram.png "diagram")
  
  State가 바뀔 때 마다 NSKRecognizerDelegate protocol의 각 state에 해당하는 messege를 받습니다.
  */
@@ -98,9 +98,7 @@
 
 #pragma mark -
 /**
- @protocol      NSKRecognizerDelegate
- @brief         NSKRecognizerDelegate protocol
- @discussion    음성인식기의 상태변화와 인식된 정보를 전달합니다.
+ 음성인식기의 상태변화와 인식된 정보를 전달합니다.
  */
 @protocol NSKRecognizerDelegate <NSObject>
 
