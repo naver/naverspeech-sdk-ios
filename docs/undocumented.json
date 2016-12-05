@@ -1,0 +1,40 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/miya/Desktop/naverspeech-sample-ios-master-openapi/framework/NaverSpeech.framework/Headers/NSKType.h",
+      "line": 30,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.unexposed",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/miya/Desktop/naverspeech-sample-ios-master-openapi/framework/NaverSpeech.framework/Headers/NSKType.h",
+      "line": 48,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.unexposed",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/miya/Desktop/naverspeech-sample-ios-master-openapi/framework/NaverSpeech.framework/Headers/NSKType.h",
+      "line": 64,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.unexposed",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/miya/Desktop/naverspeech-sample-ios-master-openapi/framework/NaverSpeech.framework/Headers/NaverSpeech.h",
+      "line": 26,
+      "symbol": "NaverSpeechVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/miya/Desktop/naverspeech-sample-ios-master-openapi/framework/NaverSpeech.framework/Headers/NaverSpeech.h",
+      "line": 27,
+      "symbol": "NaverSpeechVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/miya/Desktop/naverspeech-sample-ios-master-openapi"
+}

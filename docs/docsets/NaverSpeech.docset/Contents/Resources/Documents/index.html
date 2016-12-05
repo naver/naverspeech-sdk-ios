@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NaverSpeech  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="NaverSpeech  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NaverSpeech Docs</a> (93% documented)</p>
+        <p class="header-right"><a href="https://github.com/naver/naverspeech-sdk-ios"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NaverSpeech Reference</a>
+        <img id="carat" src="img/carat.png" />
+        NaverSpeech  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NSKRecognizedResult.html">NSKRecognizedResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NSKRecognizer.html">NSKRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NSKRecognizerConfiguration.html">NSKRecognizerConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NaverSpeechVersionNumber">NaverSpeechVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NaverSpeechVersionString">NaverSpeechVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NMSpeechRecognizerError.html">NMSpeechRecognizerError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NMSpeechSDKError.html">NMSpeechSDKError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/NSKRecognizerDelegate.html">NSKRecognizerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NS_ENUM">NS_ENUM</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#strong-naverspeech-sdk-for-ios-strong' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='strong-naverspeech-sdk-for-ios-strong'><strong>Naverspeech SDK for iOS</strong></h1>
+
+<blockquote>
+<p>본 <a href="https://github.com/naver/naverspeech-sdk-ios">저장소</a> 는 iOS용 네이버 음성인식 라이브러리 및 예제 프로젝트를 포함하고 있습니다.</p>
+</blockquote>
+
+<p>자세한 내용은 <a href="https://developers.naver.com/docs/labs/vrecog">네이버개발자 음성인식 API 명세</a> 를 참고하세요.</p>
+<a href='#' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id=''>사용법</h1>
+
+<p><strong>1.</strong> 제공된 sample app의 repository를 clone하거나 zip으로 내려받아 framework폴더 안의 <code>NaverSpeech.framework</code>를 target app의 <code>Embedded Binaries</code>에 추가 시켜줍니다. 음성인식 framework는 fat binary 형태로 제공되고 있습니다. 따라서 <code>Build Settings</code>의 <code>Enable Bitcode</code> 옵션을 사용할 수 없으니 <code>No</code>로 변경해 주어야 합니다. </p>
+
+<p><strong>2.</strong> iOS Bundle Identifier 확인 및 설정
+* Bundle Identifier: Target app의 <code>Bundle Identifier</code>를  <a href="https://developers.naver.com/appinfo">&lsquo;내 애플리케이션&rsquo;</a>의 &#39;설정&rsquo; 탭에 있는 &#39;iOS Bundle ID&#39;와 일치시켜주세요.
+* 권한 설정: 음성인식을 위해선 마이크를 통해 녹음해야 하고 녹음된 데이터를 서버로 전송해야 합니다. 따라서, 아래처럼 Info.plist에 마이크 사용과 관련한 property key값을 추가 해야 합니다.</p>
+<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>NSMicrophoneUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;&lt;/string&gt;</span>
+</code></pre>
+
+<p><strong>3.</strong> 네이버 OpenAPI는  iOS 버전 8.0 이상을 지원합니다. <code>Deployment Target</code> 값을 확인해주세요.</p>
+
+<p><strong>4.</strong> NSKRecognizerDelegate protocol을 구현해 음성인식 이벤트 발생에 해당하는 처리를 할 수 있습니다. </p>
+<pre class="highlight plaintext"><code>@protocol NSKRecognizerDelegate &lt;NSObject&gt;
+
+@optional
+- (void)recognizerDidEnterReady:(NSKRecognizer *)aRecognizer;
+- (void)recognizerDidDetectEndPoint:(NSKRecognizer *)aRecognizer;
+- (void)recognizerDidEnterInactive:(NSKRecognizer *)aRecognizer;
+- (void)recognizer:(NSKRecognizer *)aRecognizer didRecordSpeechData:(NSData *)aSpeechData;
+- (void)recognizer:(NSKRecognizer *)aRecognizer didSelectEndPointDetectType:(NSNumber *)aEPDType;
+- (void)recognizer:(NSKRecognizer *)aRecognizer didReceivePartialResult:(NSString *)aResult;
+- (void)recognizer:(NSKRecognizer *)aRecognizer didReceiveError:(NSError *)aError;
+
+@required
+- (void)recognizer:(NSKRecognizer *)aRecognizer didReceiveResult:(NSKRecognizedResult *)aResult;
+
+@end
+
+</code></pre>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='license'>License</h1>
+
+<p>See <a href="https://github.com/naver/naverspeech-sdk-ios/blob/master/LICENSE">LICENSE</a> for full license text.</p>
+
+<p>Copyright 2016 Naver Corp.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the <q>License</q>);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an <q>AS IS</q> BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="http://www.naver.com" target="_blank" rel="external">Naver</a>. All rights reserved. (Last updated: 2016-12-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

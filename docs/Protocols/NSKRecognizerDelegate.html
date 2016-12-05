@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSKRecognizerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/NSKRecognizerDelegate" class="dashAnchor"></a>
+    <a title="NSKRecognizerDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NaverSpeech Docs</a> (93% documented)</p>
+        <p class="header-right"><a href="https://github.com/naver/naverspeech-sdk-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NaverSpeech Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NSKRecognizerDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NSKRecognizedResult.html">NSKRecognizedResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NSKRecognizer.html">NSKRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NSKRecognizerConfiguration.html">NSKRecognizerConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NaverSpeechVersionNumber">NaverSpeechVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NaverSpeechVersionString">NaverSpeechVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/NMSpeechRecognizerError.html">NMSpeechRecognizerError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NMSpeechSDKError.html">NMSpeechSDKError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/NSKRecognizerDelegate.html">NSKRecognizerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@NS_ENUM">NS_ENUM</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NSKRecognizerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">NSKRecognizerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>음성인식기의 상태변화와 인식된 정보를 전달합니다.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizerDidEnterReady:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizerDidEnterReady:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizerDidEnterReady:">-recognizerDidEnterReady:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성인식 준비가 완료된 상태일 때 호출됩니다.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizerDidEnterReady</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">recognizerDidEnterReady</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizerDidDetectEndPoint:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizerDidDetectEndPoint:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizerDidDetectEndPoint:">-recognizerDidDetectEndPoint:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성발성이 종료되었을 때 호출됩니다.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizerDidDetectEndPoint</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">recognizerDidDetectEndPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L120">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizerDidEnterInactive:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizerDidEnterInactive:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizerDidEnterInactive:">-recognizerDidEnterInactive:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성인식이 완료된 상태일 때 호출됩니다.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizerDidEnterInactive</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">recognizerDidEnterInactive</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L127">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didRecordSpeechData:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizer:didRecordSpeechData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didRecordSpeechData:">-recognizer:didRecordSpeechData:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성입력을 받은 즉시 호출됩니다.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizer</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span>
+    <span class="nf">didRecordSpeechData</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">aSpeechData</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">recognizer</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didRecordSpeechData</span> <span class="nv">aSpeechData</span><span class="p">:</span> <span class="kt">Data</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aSpeechData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성신호가 저장된 버퍼</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L135">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didSelectEndPointDetectType:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizer:didSelectEndPointDetectType:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didSelectEndPointDetectType:">-recognizer:didSelectEndPointDetectType:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성인식기 설정값 중 EPDType이 hybrid인 경우에만 호출 됩니다.
+1. <code>-setEPDType:</code>이 정상동작 한 경우
+2. 음성인식기 동작 후 600ms동안 EPDType이 선택되지 않은 경우(manual)</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    -setEPDType:
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizer</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span>
+    <span class="nf">didSelectEndPointDetectType</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">aEPDType</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">recognizer</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didSelectEndPointDetectType</span> <span class="nv">aEPDType</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aEPDType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>결정된 EPD type(manual or auto)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L146">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didReceivePartialResult:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizer:didReceivePartialResult:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didReceivePartialResult:">-recognizer:didReceivePartialResult:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성인식 중간 결과를 받으면 호출됩니다.
+음성인식 중간 결과는 없거나 여러번 있을 수 있습니다.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizer</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span>
+    <span class="nf">didReceivePartialResult</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">aResult</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">recognizer</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didReceivePartialResult</span> <span class="nv">aResult</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aResult</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식 중간결과</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L155">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didReceiveError:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizer:didReceiveError:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didReceiveError:">-recognizer:didReceiveError:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성인식 중 오류가 발생했을 때 호출됩니다.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    NMSpeechErrors.h
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizer</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span>
+    <span class="nf">didReceiveError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">aError</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">recognizer</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didReceiveError</span> <span class="nv">aError</span><span class="p">:</span> <span class="kt">Error</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aError</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식 오류</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L164">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didReceiveResult:"></a>
+                    <a name="//apple_ref/objc/Method/-recognizer:didReceiveResult:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NSKRecognizerDelegate(im)recognizer:didReceiveResult:">-recognizer:didReceiveResult:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>음성인식 최종 결과를 받으면 호출됩니다.
+음성인식 최종 결과는 5개의 인식된 string array와 화자의 gender정보로 이루어져 있습니다.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    NSKGender
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    NSKRecognizerResult
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizer</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aRecognizer</span>
+    <span class="nf">didReceiveResult</span><span class="p">:(</span><span class="n"><a href="../Classes/NSKRecognizedResult.html">NSKRecognizedResult</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">aResult</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">recognizer</span><span class="p">(</span><span class="n">_</span> <span class="nv">aRecognizer</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizer.html">NSKRecognizer</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">aResult</span><span class="p">:</span> <span class="kt"><a href="../Classes/NSKRecognizedResult.html">NSKRecognizedResult</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aRecognizer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식기</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aResult</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>음성인식 최종결과</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/naver/naverspeech-sdk-ios/tree/master/framework/NaverSpeech.framework/Headers/NSKRecognizer.h#L177">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="http://www.naver.com" target="_blank" rel="external">Naver</a>. All rights reserved. (Last updated: 2016-12-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
