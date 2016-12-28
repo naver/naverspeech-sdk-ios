@@ -17,6 +17,8 @@
 import UIKit
 import NaverSpeech
 import Common
+import AVFoundation
+
 
 /*네이버 개발자 센터(https://developers.naver.com)에서 앱 등록을 한 후 발급받은 client id가 필요합니다.*/
 let ClientID = ""
@@ -91,6 +93,7 @@ class HybridViewController: UIViewController {
         if sender.state == .began {
             if self.speechRecognizer.isRunning == false {
                 self.epdType = .hybrid
+                try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
                 self.speechRecognizer.start(with: self.languages.selectedLanguage)
                 self.statusLabel.text = "Connecting........"
                 
@@ -143,6 +146,7 @@ extension HybridViewController: NSKRecognizerDelegate {
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
         self.statusLabel.text = ""
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didRecordSpeechData aSpeechData: Data!) {
@@ -218,6 +222,7 @@ extension HybridViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             self.recognitionResultLabel.text = "Canceled"
             self.setRecognitionButtonTitle(withText: "Record", color: .blue)
             self.recognitionButton.isEnabled = true
+            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
         }
     }
 }
