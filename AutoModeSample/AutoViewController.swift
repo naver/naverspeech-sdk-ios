@@ -79,7 +79,7 @@ class AutoViewController: UIViewController {
         if self.speechRecognizer.isRunning {
             self.speechRecognizer.stop()
         } else {
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
+            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
             self.speechRecognizer.start(with: self.languages.selectedLanguage)
             self.recognitionButton.isEnabled = false
             self.statusLabel.text = "Connecting......"
