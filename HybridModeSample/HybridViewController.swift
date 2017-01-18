@@ -95,7 +95,6 @@ class HybridViewController: UIViewController {
                 self.epdType = .hybrid
                 try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
                 self.speechRecognizer.start(with: self.languages.selectedLanguage)
-                self.statusLabel.text = "Connecting........"
                 
             } else if self.epdType == .auto {
                 self.speechRecognizer.stop()
@@ -115,7 +114,6 @@ class HybridViewController: UIViewController {
     @IBOutlet weak var languagePickerButton: UIButton!
     @IBOutlet weak var recognitionResultLabel: UILabel!
     @IBOutlet weak var recognitionButton: UIButton!
-    @IBOutlet weak var statusLabel: UILabel!
     
     fileprivate let speechRecognizer: NSKRecognizer
     fileprivate let languages = Languages()
@@ -131,7 +129,6 @@ extension HybridViewController: NSKRecognizerDelegate {
     public func recognizerDidEnterReady(_ aRecognizer: NSKRecognizer!) {
         print("Event occurred: Ready")
         
-        self.statusLabel.text = "Connected"
         self.recognitionResultLabel.text = "Recognizing......"
         self.recognitionButton.isEnabled = true
     }
@@ -145,7 +142,6 @@ extension HybridViewController: NSKRecognizerDelegate {
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
-        self.statusLabel.text = ""
         try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
     }
     
@@ -182,6 +178,7 @@ extension HybridViewController: NSKRecognizerDelegate {
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
+        self.recognitionResultLabel.text = "Error: " + aError.localizedDescription
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceive aResult: NSKRecognizedResult!) {

@@ -80,7 +80,6 @@ class ManualViewController: UIViewController {
         if sender.state == .began {
             try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
             self.speechRecognizer.start(with: self.languages.selectedLanguage)
-            self.statusLabel.text = "Connecting......."
         } else if sender.state == .ended {
             self.speechRecognizer.stop()
         }
@@ -90,7 +89,6 @@ class ManualViewController: UIViewController {
     @IBOutlet weak var languagePickerButton: UIButton!
     @IBOutlet weak var recognitionResultLabel: UILabel!
     @IBOutlet weak var recognitionButton: UIButton!
-    @IBOutlet weak var statusLabel: UILabel!
     
     fileprivate let speechRecognizer: NSKRecognizer
     fileprivate let languages = Languages()
@@ -105,7 +103,6 @@ extension ManualViewController: NSKRecognizerDelegate {
     public func recognizerDidEnterReady(_ aRecognizer: NSKRecognizer!) {
         print("Event occurred: Ready")
         
-        self.statusLabel.text = "Connected"
         self.recognitionResultLabel.text = "Recognizing......"
         self.setRecognitionButtonTitle(withText: "Recognizing", color: .red)
         self.recognitionButton.isEnabled = true
@@ -120,7 +117,6 @@ extension ManualViewController: NSKRecognizerDelegate {
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
-        self.statusLabel.text = ""
         try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
     }
     
@@ -140,6 +136,7 @@ extension ManualViewController: NSKRecognizerDelegate {
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
+        self.recognitionResultLabel.text = "Error: " + aError.localizedDescription
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceive aResult: NSKRecognizedResult!) {

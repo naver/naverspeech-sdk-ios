@@ -58,13 +58,6 @@
                                     <action selector="recognitionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqT-Pg-zlI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbG-pq-gVF">
-                                <rect key="frame" x="79" y="521" width="217" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -72,7 +65,6 @@
                         <outlet property="languagePickerButton" destination="h2X-EX-Ekk" id="mW5-ZU-A9b"/>
                         <outlet property="recognitionButton" destination="f8T-yc-74W" id="o0B-pl-D4H"/>
                         <outlet property="recognitionResultLabel" destination="x7b-8O-LXY" id="Y7y-Ge-e6e"/>
-                        <outlet property="statusLabel" destination="DbG-pq-gVF" id="wtm-da-N6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

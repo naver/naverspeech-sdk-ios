@@ -55,13 +55,6 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gju-8b-5dG">
-                                <rect key="frame" x="79" y="522" width="217" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -69,7 +62,6 @@
                         <outlet property="languagePickerButton" destination="KBy-K3-YNh" id="5BI-IV-3Oz"/>
                         <outlet property="recognitionButton" destination="P9O-g4-FGs" id="J43-ka-IUi"/>
                         <outlet property="recognitionResultLabel" destination="NTB-rx-eK9" id="vK4-6X-IVl"/>
-                        <outlet property="statusLabel" destination="Gju-8b-5dG" id="2Ka-2N-t6o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

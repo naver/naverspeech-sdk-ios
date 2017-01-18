@@ -555,7 +555,7 @@
 					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = ManualModeSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navercorp.ManualModeSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -581,7 +581,7 @@
 					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = ManualModeSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navercorp.ManualModeSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,7 +605,7 @@
 					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = HybridModeSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navercorp.HybridModeSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -631,7 +631,7 @@
 					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = HybridModeSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navercorp.HybridModeSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -655,7 +655,7 @@
 					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = AutoModeSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navercorp.AutoModeSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -681,7 +681,7 @@
 					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = AutoModeSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navercorp.AutoModeSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
