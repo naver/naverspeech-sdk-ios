@@ -38,6 +38,7 @@
 @end
 
 ```
+**5.** 음성인식 framework는 universal framework로 빌드 되어 있습니다. xcode의 simulator에서도 동작 하도록 i386, x86_6 architecture가 포함이 되어 있습니다. 이 architecture가 포함된 framework은 appstore등록시 [submission error](http://www.openradar.me/radar?id=6409498411401216)를 냅니다. 이를 해결하기 위해서 run script를 추가해 script directory하위의 strip-frameworks.sh가 실행될 수 있도록 해주면 됩니다. 
 
 License
 ==
