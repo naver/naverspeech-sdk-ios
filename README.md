@@ -6,7 +6,7 @@
 
 사용법
 ==
-**1.** 제공된 sample app의 repository를 clone하거나 zip으로 내려받아 framework폴더 안의 `NaverSpeech.framework`를 target app의 `Embedded Binaries`에 추가 시켜줍니다. 음성인식 framework는 fat binary 형태로 제공되고 있습니다. 따라서 `Build Settings`의 `Enable Bitcode` 옵션을 사용할 수 없으니 `No`로 변경해 주어야 합니다. 
+**1.** 제공된 sample app의 repository를 clone하거나 zip으로 내려받아 [framework directory](https://github.com/naver/naverspeech-sdk-ios/tree/master/framework) 하위의 `NaverSpeech.framework`를 target app의 `Embedded Binaries`에 추가 시켜줍니다. 음성인식 framework는 fat binary 형태로 제공되고 있습니다. 따라서 `Build Settings`의 `Enable Bitcode` 옵션을 사용할 수 없으니 `No`로 변경해 주어야 합니다. 
 
 **2.** iOS Bundle Identifier 확인 및 설정
 * Bundle Identifier: Target app의 `Bundle Identifier`를  ['내 애플리케이션'](https://developers.naver.com/appinfo)의 '설정' 탭에 있는 'iOS Bundle ID'와 일치시켜주세요.
