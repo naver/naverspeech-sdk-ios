@@ -38,7 +38,21 @@
 @end
 
 ```
-**5.** 음성인식 framework는 universal framework로 빌드 되어 있습니다. xcode의 simulator에서도 동작 하도록 i386, x86_6 architecture가 포함이 되어 있습니다. 이 architecture가 포함된 framework은 appstore등록시 [submission error](http://www.openradar.me/radar?id=6409498411401216)를 냅니다. 이를 해결하기 위해서 run script를 추가해 script directory하위의 strip-frameworks.sh가 실행될 수 있도록 해주면 됩니다. 
+
+**5.** 음성인식을 위해서는 AVAudioSession이 record가능한 상태여야 합니다. App의 spec에 따라 AVAudioSession을 적절히 setting해서 사용하면 됩니다.
+```swift
+  @IBAction func recognitionButtonTapped(_ sender: Any) {
+        if self.speechRecognizer.isRunning {
+            self.speechRecognizer.stop()
+        } else {
+            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
+            self.speechRecognizer.start(with: self.languages.selectedLanguage)
+            self.recognitionButton.isEnabled = false
+        }
+    }
+```
+
+**6.** 음성인식 framework는 universal framework로 빌드 되어 있습니다. xcode의 simulator에서도 동작 하도록 i386, x86_6 architecture가 포함이 되어 있습니다. 이 architecture가 포함된 framework은 appstore등록시 [submission error](http://www.openradar.me/radar?id=6409498411401216)를 냅니다. 이를 해결하기 위해 Build phases에 run script를 추가해 [script directory](https://github.com/naver/naverspeech-sdk-ios/tree/master/script)하위의 strip-frameworks.sh가 실행될 수 있도록 해주면 됩니다. 
 
 License
 ==
