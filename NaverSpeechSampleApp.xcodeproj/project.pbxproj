@@ -35,7 +35,6 @@
 		6DEBD5271DCB5C3000705FA8 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEBD5131DCB2A2D00705FA8 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DEBD5281DCB5DDA00705FA8 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEBD5131DCB2A2D00705FA8 /* Common.framework */; };
 		6DEBD5291DCB5DDA00705FA8 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEBD5131DCB2A2D00705FA8 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DEBD53A1DD1BB1500705FA8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DEBD5381DD1BB1500705FA8 /* Info.plist */; };
 		6DEBD53B1DD1BB1500705FA8 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD5391DD1BB1500705FA8 /* Languages.swift */; };
 		6DEBD53C1DD1C50100705FA8 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD5391DD1BB1500705FA8 /* Languages.swift */; };
 		6DEBD53D1DD1CD8A00705FA8 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD5391DD1BB1500705FA8 /* Languages.swift */; };
@@ -394,7 +393,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DEBD53A1DD1BB1500705FA8 /* Info.plist in Resources */,
 				6DEBD4771DC9E80E00705FA8 /* LaunchScreen.storyboard in Resources */,
 				6DEBD4741DC9E80E00705FA8 /* Assets.xcassets in Resources */,
 				6DEBD4721DC9E80E00705FA8 /* Main.storyboard in Resources */,
