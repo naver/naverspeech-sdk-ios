@@ -2,14 +2,14 @@
 
 > 본 [저장소](https://github.com/naver/naverspeech-sdk-ios) 는 iOS용 네이버 음성인식 라이브러리 및 예제 프로젝트를 포함하고 있습니다.
 
-자세한 내용은 [네이버개발자 음성인식 API 명세](https://developers.naver.com/docs/labs/vrecog) 및 [iOS API Document](http://naver.github.io/naverspeech-sdk-ios/) 를 참고하세요.
+자세한 내용은 [네이버 클라우드 플랫폼의 음성인식 API 명세](http://docs.ncloud.com/ko/naveropenapi_v3/speech/recognition-sdk.html) 및 [iOS API Document](http://naver.github.io/naverspeech-sdk-ios/) 를 참고하세요.
 
 사용법
 ==
 **1.** 제공된 sample app의 repository를 clone하거나 zip으로 내려받아 [framework directory](https://github.com/naver/naverspeech-sdk-ios/tree/master/framework) 하위의 `NaverSpeech.framework`를 target app의 `Embedded Binaries`에 추가 시켜줍니다. 음성인식 framework는 fat binary 형태로 제공되고 있습니다. 따라서 `Build Settings`의 `Enable Bitcode` 옵션을 사용할 수 없으니 `No`로 변경해 주어야 합니다. 
 
 **2.** iOS Bundle Identifier 확인 및 설정
-* Bundle Identifier: Target app의 `Bundle Identifier`를  ['내 애플리케이션'](https://developers.naver.com/appinfo)의 '설정' 탭에 있는 'iOS Bundle ID'와 일치시켜주세요.
+* Bundle Identifier: Target app의 `Bundle Identifier`를  [ncloud에 등록한 application 정보](http://docs.ncloud.com/ko/naveropenapi_v3/application.html)중 'iOS Bundle ID'와 일치시켜주세요.
 * 권한 설정: 음성인식을 위해선 마이크를 통해 녹음해야 하고 녹음된 데이터를 서버로 전송해야 합니다. 따라서, 아래처럼 Info.plist에 마이크 사용과 관련한 property key값을 추가 해야 합니다.
 
 ```xml
