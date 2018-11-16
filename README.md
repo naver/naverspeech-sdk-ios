@@ -9,7 +9,7 @@
 **1.** 제공된 sample app의 repository를 clone하거나 zip으로 내려받아 [framework directory](https://github.com/naver/naverspeech-sdk-ios/tree/master/framework) 하위의 `NaverSpeech.framework`를 target app의 `Embedded Binaries`에 추가 시켜줍니다. 음성인식 framework는 fat binary 형태로 제공되고 있습니다. 따라서 `Build Settings`의 `Enable Bitcode` 옵션을 사용할 수 없으니 `No`로 변경해 주어야 합니다. 
 
 **2.** iOS Bundle Identifier 확인 및 설정
-* Bundle Identifier: Target app의 `Bundle Identifier`를  [ncloud에 등록한 application 정보](http://docs.ncloud.com/ko/naveropenapi_v3/application.html)중 'iOS Bundle ID'와 일치시켜주세요.
+* Bundle Identifier: Target app의 `Bundle Identifier`를  [ncloud에 등록한 application 정보](http://docs.ncloud.com/ko/naveropenapi_v3/application.html) 중 'iOS Bundle ID'와 일치시켜주세요.
 * 권한 설정: 음성인식을 위해선 마이크를 통해 녹음해야 하고 녹음된 데이터를 서버로 전송해야 합니다. 따라서, 아래처럼 Info.plist에 마이크 사용과 관련한 property key값을 추가 해야 합니다.
 
 ```xml
