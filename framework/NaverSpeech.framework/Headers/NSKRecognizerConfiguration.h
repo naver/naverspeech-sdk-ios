@@ -57,18 +57,31 @@
 @property (nonatomic, getter=canQuestionDetected) BOOL       questionDetected;
 
 /**
+ 공공기관 사용여부
+ 공공기관용 initializer를 이용하면 true
+ 민간기관용 initializer를 이용하면 false 
+ */
+@property (nonatomic, readonly, getter=isGovUsed) BOOL        govUsed;
+
+/**
  EPD(End Point Detection)type 선택
  default는 Auto
  */
 @property (nonatomic)                             NSKEPDType epdType;
 
 /**
- 네이버 개발자 센터(https://developers.naver.com)에서 앱 등록을 한 후 발급받은 client id가 필요합니다.
+ 네이버 클라우드 플랫폼(https://www.ncloud.com/)에서 앱 등록을 한 후 발급받은 client id가 필요합니다.
  
  @param     aClientID       Client id
  @return    NSKRecognizerConfiguration instance
  */
-- (instancetype)initWithClientID:(NSString *)aClientID;
+
+// 민간기관용
++ (instancetype)configurationWithClientID:(NSString *)aClientID;
+
+
+// 공공기관용
++ (instancetype)govConfigurationWithClientID:(NSString *)aClientID;
 
 
 @end
