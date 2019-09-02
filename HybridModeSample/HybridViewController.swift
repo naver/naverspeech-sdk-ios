@@ -93,7 +93,7 @@ class HybridViewController: UIViewController {
         if sender.state == .began {
             if self.speechRecognizer.isRunning == false {
                 self.epdType = .hybrid
-                try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
+                try? AVAudioSession.sharedInstance().setCategory(.record)
                 self.speechRecognizer.start(with: self.languages.selectedLanguage)
                 
             } else if self.epdType == .auto {
@@ -142,7 +142,7 @@ extension HybridViewController: NSKRecognizerDelegate {
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
-        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
+        try? AVAudioSession.sharedInstance().setCategory(.soloAmbient)
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didRecordSpeechData aSpeechData: Data!) {
@@ -168,13 +168,13 @@ extension HybridViewController: NSKRecognizerDelegate {
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceivePartialResult aResult: String!) {
-        print("Partial result: \(aResult)")
+        print("Partial result: \(String(describing: aResult))")
         
         self.recognitionResultLabel.text = aResult
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceiveError aError: Error!) {
-        print("Error: \(aError)")
+        print("Error: \(String(describing: aError))")
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
@@ -182,7 +182,7 @@ extension HybridViewController: NSKRecognizerDelegate {
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceive aResult: NSKRecognizedResult!) {
-        print("Final result: \(aResult)")
+        print("Final result: \(String(describing: aResult))")
         
         if let result = aResult.results.first as? String {
             self.recognitionResultLabel.text = "Result: " + result
@@ -219,7 +219,7 @@ extension HybridViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             self.recognitionResultLabel.text = "Canceled"
             self.setRecognitionButtonTitle(withText: "Record", color: .blue)
             self.recognitionButton.isEnabled = true
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
+            try? AVAudioSession.sharedInstance().setCategory(.soloAmbient)
         }
     }
 }

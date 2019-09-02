@@ -78,7 +78,7 @@ class ManualViewController: UIViewController {
      */
     @IBAction func recognitionButtonPressed(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
+            try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.record)
             self.speechRecognizer.start(with: self.languages.selectedLanguage)
         } else if sender.state == .ended {
             self.speechRecognizer.stop()
@@ -117,7 +117,7 @@ extension ManualViewController: NSKRecognizerDelegate {
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
-        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
+        try? AVAudioSession.sharedInstance().setCategory(.soloAmbient)
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didRecordSpeechData aSpeechData: Data!) {
@@ -126,13 +126,13 @@ extension ManualViewController: NSKRecognizerDelegate {
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceivePartialResult aResult: String!) {
-        print("Partial result: \(aResult)")
+        print("Partial result: \(String(describing: aResult))")
         
         self.recognitionResultLabel.text = aResult
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceiveError aError: Error!) {
-        print("Error: \(aError)")
+        print("Error: \(String(describing: aError))")
         
         self.setRecognitionButtonTitle(withText: "Record", color: .blue)
         self.recognitionButton.isEnabled = true
@@ -140,7 +140,7 @@ extension ManualViewController: NSKRecognizerDelegate {
     }
     
     public func recognizer(_ aRecognizer: NSKRecognizer!, didReceive aResult: NSKRecognizedResult!) {
-        print("Final result: \(aResult)")
+        print("Final result: \(String(describing: aResult))")
         
         if let result = aResult.results.first as? String {
             self.recognitionResultLabel.text = "Result: " + result
@@ -177,7 +177,7 @@ extension ManualViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             self.recognitionResultLabel.text = "Canceled"
             self.setRecognitionButtonTitle(withText: "Record", color: .blue)
             self.recognitionButton.isEnabled = true
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategorySoloAmbient)
+            try? AVAudioSession.sharedInstance().setCategory(.soloAmbient)
         }
     }
 }
