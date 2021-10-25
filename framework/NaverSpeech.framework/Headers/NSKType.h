@@ -63,5 +63,17 @@ typedef NS_ENUM(NSInteger, NSKEPDType)
     NSKEPDTypeHybrid = 2
 };
 
+/**
+ Domain type
+ */
+typedef NS_ENUM(NSInteger, NSKDomainType)
+{
+    /// -NSKDomainTypeNone: normal
+    NSKDomainTypeNormal = 0,
+    /// -NSKDomainTypeGov: Gov
+    NSKDomainTypeGov = 1,
+    /// -NSKDomainTypeFin: Fin
+    NSKDomainTypeFin = 2
+};
 
 #endif /* NSKType_h */

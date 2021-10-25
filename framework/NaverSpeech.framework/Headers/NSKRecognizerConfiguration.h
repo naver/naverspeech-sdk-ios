@@ -57,11 +57,9 @@
 @property (nonatomic, getter=canQuestionDetected) BOOL       questionDetected;
 
 /**
- 공공기관 사용여부
- 공공기관용 initializer를 이용하면 true
- 민간기관용 initializer를 이용하면 false 
+도메인 타입 (Normal, Gov, Fin)
  */
-@property (nonatomic, readonly, getter=isGovUsed) BOOL        govUsed;
+@property (nonatomic, readonly, getter=domainType) NSKDomainType        domainType;
 
 /**
  EPD(End Point Detection)type 선택
@@ -83,5 +81,8 @@
 // 공공기관용
 + (instancetype)govConfigurationWithClientID:(NSString *)aClientID;
 
+
+// 금융용
++ (instancetype)finConfigurationWithClientID:(NSString *)aClientID;
 
 @end
