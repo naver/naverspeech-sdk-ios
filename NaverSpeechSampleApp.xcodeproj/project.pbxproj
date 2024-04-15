@@ -39,7 +39,6 @@
 		6DEBD53C1DD1C50100705FA8 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD5391DD1BB1500705FA8 /* Languages.swift */; };
 		6DEBD53D1DD1CD8A00705FA8 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD5391DD1BB1500705FA8 /* Languages.swift */; };
 		6DFC86371DE2C23E00675C3E /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DEBD5371DD1BB1500705FA8 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE533D4D2BCCE7A200AA3D1D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CE533D4C2BCCE7A200AA3D1D /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,7 +131,6 @@
 		6DEBD5381DD1BB1500705FA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Common/Info.plist; sourceTree = SOURCE_ROOT; };
 		6DEBD5391DD1BB1500705FA8 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Languages.swift; path = Common/Languages.swift; sourceTree = SOURCE_ROOT; };
 		6DED8A4C1C9A5993009E6BDE /* NaverSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaverSpeech.framework; path = framework/NaverSpeech.framework; sourceTree = "<group>"; };
-		CE533D4C2BCCE7A200AA3D1D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +225,6 @@
 		6DED8A1B1C9A5916009E6BDE = {
 			isa = PBXGroup;
 			children = (
-				CE533D4C2BCCE7A200AA3D1D /* PrivacyInfo.xcprivacy */,
 				6DEBD5141DCB2A2D00705FA8 /* Common */,
 				6DEBD4BF1DCAFDB800705FA8 /* AutoModeSample */,
 				6DEBD46B1DC9E80E00705FA8 /* ManualModeSample */,
@@ -427,7 +424,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE533D4D2BCCE7A200AA3D1D /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
